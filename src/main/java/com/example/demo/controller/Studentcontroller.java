@@ -2,4 +2,14 @@ packagecom.example.practice.controller;
 
 
 @RestController
-public class
+public class Studentcontroller{
+    @Autowired
+    Studentservice studentservice;
+
+    @PostMapping("/add")
+    public StudentEntity
+    post(@RequestBody StudentEntity student){
+        return studentservice.saveData(student);
+    }
+    
+}

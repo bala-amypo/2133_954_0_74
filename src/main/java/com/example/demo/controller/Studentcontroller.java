@@ -24,5 +24,7 @@ public class Studentcontroller{
     }
     @PutMapping("/update/{id}")
     public String
-    update(@RequestBody StudentEntity student)
+    update(@RequestBody StudentEntity student,@PathVariable int id){
+        Optional<StudentEntity> existingStudent = studentservice.getStudentById(id);
+    }
 }

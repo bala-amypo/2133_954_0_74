@@ -22,5 +22,7 @@ public class Studentcontroller{
     get(@PathVariable int id){
         return studentservice.getStudentById(id);
     }
-    
+    @PutMapping("/update/{id}")
+    public String
+    update(@RequestBody StudentEntity student)
 }

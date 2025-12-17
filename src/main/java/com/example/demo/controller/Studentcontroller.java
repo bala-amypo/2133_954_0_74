@@ -18,5 +18,9 @@ public class Studentcontroller{
 
     }
     @GetMapping("/get/{id}")
-    public Optional<
+    public Optional<StudentEntity>
+    get(@PathVariable int id){
+        return studentservice.getStudentById(id);
+    }
+    
 }
